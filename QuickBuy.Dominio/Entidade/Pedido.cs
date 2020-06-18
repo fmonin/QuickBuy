@@ -1,6 +1,7 @@
 ﻿using QuickBuy.Dominio.ObjetoDeValor;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace QuickBuy.Dominio.Entidade
 {
@@ -25,8 +26,9 @@ namespace QuickBuy.Dominio.Entidade
         {
             LimparMensagensValidacao();
 
-            if (!ItemPedido.Any())
+            if (!ItensPedido.Any())
                 AdicionaCritica("Critica - Pedido não pode ficar sem Item de Pedido");
+
             if (string.IsNullOrEmpty(CEP))
                 AdicionaCritica("Critica - CEP deve estar preenchido");                    
 
